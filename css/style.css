@@ -1,0 +1,218 @@
+/* Estilos generales para el encabezado (ahora navbar) */
+.header-panafer {
+  position: fixed; /* Fija el navbar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 25px;
+  z-index: 100; /* Asegura que esté encima de otros elementos */
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row; /* Alinear horizontalmente por defecto */
+  justify-content: space-between; /* Espacio entre logo y nav */
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Estilos del logo */
+.logo-panafer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear a la izquierda en pantallas grandes */
+  text-decoration: none;
+  color: white;
+}
+
+.logo-icon {
+  width: 150px;
+  height: 20px;
+  border-top: 2px solid white;
+  margin-bottom: 5px;
+}
+
+.logo-text {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0; /* Elimina márgenes innecesarios */
+}
+
+.logo-subtext {
+  font-size: 0.8em;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+/* Estilos de la navegación */
+.nav-panafer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Elimina márgenes */
+  display: flex;
+}
+
+.nav-panafer li {
+  margin: 0 15px;
+}
+
+.nav-panafer a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.nav-panafer a:hover {
+  color: lightgray;
+}
+
+/* Ajuste para el contenido principal */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 77px; /* Ajusta este valor a la altura de tu navbar (25px padding + altura del contenido) */
+  box-sizing: border-box;
+}
+
+/* Media query (opcional, pero recomendado) */
+@media (max-width: 767px) { /* Para pantallas pequeñas */
+  .header-content {
+      flex-direction: column;
+      align-items: center;
+  }
+  .logo-panafer {
+      align-items: center; /* Centra el logo en pantallas pequeñas */
+      margin-bottom: 10px;
+  }
+  .nav-panafer ul {
+      flex-direction: column; /* Navegación vertical en móvil */
+      align-items: center;
+  }
+  .nav-panafer li {
+      margin: 5px 0; /* Espaciado vertical en móvil */
+  }
+}
+
+
+/* ... (estilos del header) ... */
+
+.image-container {
+  width: 100%;
+  position: relative; /* Para posicionar el contenido sobre la imagen */
+  overflow: hidden; /* Evita que la imagen se desborde */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* o object-fit: cover; si prefieres recorte */
+}
+
+.image-content {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Media Queries (opcional - para ajustar el contenido en diferentes tamaños de pantalla) */
+@media (max-width: 767px) {
+  .image-content {
+      bottom: 20px;
+      left: 10px;
+      right: 10px;
+      font-size: 0.8em;
+      transform: translateX(0);
+  }
+  .image-content h2 {
+      font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .image-content {
+      font-size: 0.9em;
+  }
+}
+/* seccion nosotros*/
+
+
+/* Estilos para la sección "Nosotros" */
+.nosotros {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros2 {
+    display: flex; /* Para alinear imagen y texto */
+    flex-wrap: wrap; /* Para responsive */
+    align-items: flex-start; /* Alinea al inicio verticalmente */
+}
+
+.nosotros-imagen {
+    flex: 1 1 30%; /* La imagen ocupa el 30% del espacio */
+    max-width: 300px; /* Ancho máximo de la imagen */
+    margin-right: 20px;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros-texto {
+    flex: 1 1 60%; /* El texto ocupa el 60% del espacio */
+    text-align: justify;
+}
+
+.nosotros-texto h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+
+.nosotros-texto p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 768px) {
+    .nosotros2 {
+        flex-direction: column; /* Apila imagen y texto */
+        align-items: center; /* Centra verticalmente */
+        text-align: center;
+    }
+    .nosotros-imagen {
+        margin: 0 0 20px 0;
+        max-width: 100%;
+    }
+    .nosotros-texto h2{
+        text-align: center;
+    }
+}
